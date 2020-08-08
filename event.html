@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		*
+		{
+			margin: 0;
+			padding: 0;
+		}
+		body
+		{
+	     
+	     background-image: url("robot.jpg");
+	      /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+  
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #464646;
+		}
+		img
+		{
+			display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+		z-index: 99999;
+		}
+		h6
+		{
+			color: rgb(255,255,255);
+          vertical-align: middle;
+         text-align: center;
+   font-size: 8vw;
+   padding: 30vh;
+		}
+		button
+		{
+			vertical-align: middle;
+			left: 15vw;
+		}
+		.center
+		{
+			display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+      cursor: pointer;  
+           
+            height: 50px; 
+            width: 300px;
+            text-align: center;
+            vertical-align: middle;
+           }
+		.forhover
+		{
+
+		}
+		.hidden
+		{
+			display: none;
+			text-align: center;
+			color:rgb(255,255,255);
+			margin-left: 20vw;
+			margin-right: 20vw;
+			font-size: 2vw;
+
+		}
+		.forhover:hover .hidden
+		{
+          display: block;
+		}
+		
+.robots {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+
+.head, 
+.left_arm, 
+.torso, 
+.right_arm, 
+.left_leg, 
+.right_leg {
+   background-color: #7FFF00;
+}
+
+.head { 
+  width: 200px; 
+  margin: 0 auto; 
+  height: 100px; 
+  border-radius: 200px 200px 0 0; 
+  margin-bottom: 10px;
+} 
+
+.eyes {
+  display: flex;
+}
+
+.head:hover {
+  width: 300px;
+    transition: 1s ease-in-out;
+}
+
+.upper_body { 
+  width: 300px; 
+  height: 150px;
+  display: flex; 
+} 
+
+.left_arm, .right_arm { 
+  width: 40px; 
+  height: 125px;
+  border-radius: 100px; 
+} 
+
+.left_arm { 
+  margin-right: 10px; 
+}
+.left_arm:hover {
+  -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+
+} 
+
+.right_arm { 
+  margin-left: 10px; 
+} 
+.right_arm:hover {
+  -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+
+} 
+
+.torso { 
+  width: 200px; 
+  height: 200px;
+  border-radius: 0 0 50px 50px; 
+} 
+.torso:hover {
+  width: 500px;
+    transition: 1s ease-in-out;
+}
+
+.lower_body { 
+  width: 200px; 
+  height: 200px;
+  /* This is another useful property. Hmm what do you think it does?*/
+  margin: 0 auto;
+  display: flex; 
+} 
+
+.left_leg, .right_leg { 
+  width: 40px; 
+  height: 120px;
+  border-radius: 0 0 100px 100px; 
+} 
+
+.left_leg { 
+  margin-left: 45px; 
+} 
+
+.left_leg:hover {
+  -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+
+}
+
+.right_leg { 
+  margin-left: 30px; 
+}
+
+.right_leg:hover{
+  -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(-20deg);
+
+}
+
+.left_eye, .right_eye { 
+  width: 20px; 
+  height: 20px; 
+  border-radius: 15px; 
+  background-color: white;  
+} 
+
+.left_eye { 
+  /* These properties are new and you haven't encountered
+  in this course. Check out CSS Tricks to see what it does! */
+  position: relative; 
+  top: 100px; 
+  left: 40px; 
+} 
+
+.right_eye { 
+  position: relative; 
+  top: 100px; 
+  left: 120px; 
+}
+
+	</style>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body bgcolor="black">
+	<img src="robo2.png">
+	<ul>
+		<div class="forhover"><center><h6 class="center" data-aos="zoom-in-up">Robowar</h6></center>
+		<div class="hidden">Let the wars begin! With the increasing popularity of robotic combat sports such as RoboWars and Battle of Bots, many students think about building a fighting robot of their own. If you are crazy enough, then you can build your own fighting machine then here stands your chance , conducted by the Robotics Club of MMMUT Gorakhpur. It is savage. It is treacherous. It is a game of style, control, damage and aggression with the robots pitting each other in deadly combat. It is time to concentrate on the hacking and slashing of the robots. Now it is time to rumble. It's the Grand Finale of war. Get ready to feel the chills and shivers down your spine and become a part of Robowars.</div></div>
+		<div class="forhover"><center><h6 class="center" data-aos="fade-left">Laser Strike</h6></center>
+		<div class="hidden">If you spend hours playing counter strike, Laser Strike is the one for you. A simulation of counter strike, it leaves you thrilled and amazed. Two teams will be fighting simultaneously with the help of a sensor kit and a laser kit and members of one team will have to kill the members of the enemy team.</div></div>
+		<div class="forhover"><center><h6 class="center" data-aos="fade-down-right">Electro Tekken</h6></center>
+		<div class="hidden">Do you like playing Fighting Games?Do you love Fighting games?? What if you are one of the characters???Playing on grounds of MMMUT as real Raone or Gone This Event is the main attraction of Robomania.You can select your opponent and start playing Tekken virtually on the basis of movements of you hands and legs. Imagine yourself playing the fighting game in real way as if you are playing in fighting arena. Robotics club thus presents all new and different concept of virtual gaming in real way.Get ready to experience Tekken at your hands in Robomania 2016</div></div>
+		<div class="forhover"><center><h6 class="center" data-aos="flip-left">Online Event</h6></center>
+		<div class="hidden">An online competition to test your problem solving skills and your thinking ability. It will take you to another world of fun.</div></div>
+	    <div class="forhover"><center><h6 class="center" data-aos="flip-right">Bomb Diffusion</h6></center><div class="hidden">Take a few minutes to hatchet up the tension via that classic struggle over which wire to cut so as to defuse a bomb and avert catastrophe The dilemma of the wire,the bomb and the ticking clock.Plunge yourself into a web of intricate circuits, mind boggling logics and be a part of the electrifying odyssey to realise what separates you from the rest. Come on solve the electrical networks and be a part of Robomania Bomb Diffusion.</div></div>
+		<div class="forhover"><center><h6 class="center" data-aos="flip-up">Electronic Chess</h6></center>
+			<div class="hidden">Such a game decoys played with endeavour and interest. Get ready to compete with the opponent. Lets change the doomsday scenerio about the people loosing interest in chess.We welcome you with one of the most popular event i.e Electronic Chess,so lets confront the human creativity which was more paramount. track the path through the glowing LED's to beat your opponent.Let be the czar of the black and white battlefield.</div></div>
+		<div class="forhover"><center><h6 class="center" data-aos="flip-down" >Electronic Art</h6></center>
+			<div class="hidden">"The True Work Of Art Is But A Shadow Of Perfection" Its time to prove your creativity in the world of electronics.Enjoy the pleasure of sketching your imagination on paper by using variety of electronic components.Grasp the chance of being an artist of creativity As we know.Art is the most intense mode of individualism that the world has known.</div></div>
+		<div class="forhover"><center><h6 class="center" data-aos="zoom-in-up">Reflex</h6></center><div class="hidden">"The True Work Of Art Is But A Shadow Of Perfection" Its time to prove your creativity in the world of electronics.Enjoy the pleasure of sketching your imagination on paper by using variety of electronic components.Grasp the chance of being an artist of creativity As we know.Art is the most intense mode of individualism that the world has known.</div></div>
+		<div class="forhover"><center><h6 class="center" data-aos="zoom-in-down">Circuit Wizard</h6></center><div class="hidden">Wanna be a wizard of circuit components.Here we bring about the event "CIRCUIT WIZARD" which ensures the proper knowledge and minute details of the electric components. Don't resist your temptations to be a wizard of circuit.Allow the current to rejuvenate with the spark of electronic era.</div></div>
+		<div class="forhover"><center><h6 class="center" data-aos="fade-left">Sherlocked</h6></center><div class="hidden">Let the wars begin! With the increasing popularity of robotic combat sports such as RoboWars and Battle of Bots, many students think about building a fighting robot of their own. If you are crazy enough, then you can build your own fighting machine then here stands your chance , conducted by the Robotics Club of MMMUT Gorakhpur. It is savage. It is treacherous. It is a game of style, control, damage and aggression with the robots pitting each other in deadly combat. It is time to concentrate on the hacking and slashing of the robots. Now it is time to rumble. It's the Grand Finale of war. Get ready to feel the chills and shivers down your spine and become a part of Robowars.</div></div>
+		<div class="forhover"><center><h6 class="center" data-aos="fade-right">Electro NFS</h6>
+			<div class="hidden">"Need For Speed brought to life....Get Ready to experience more thrilling,more exciting larger than life gaming with the club's newly introduced event NFS,gripping you more and more with its magnanimous setup both literally and metaphorically thrust your control skils at the stearing and race your opponent to the finish for a win.....!"</div>
+	</div>
+	</ul>
+	 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({});
+  </script>
+ <br><br><br><br><br><h1></h1>
+  <div class="robots">
+    <div class="android"> 
+      <div class="head"> 
+        <div class="eyes"> 
+          <div class="left_eye"></div> 
+          <div class="right_eye"></div>
+        </div> 
+      </div> 
+      <div class="upper_body"> 
+        <div class="left_arm"></div> 
+        <div class="torso"></div> 
+        <div class="right_arm"></div> 
+      </div> 
+      <div class="lower_body"> 
+        <div class="left_leg"></div> 
+        <div class="right_leg"></div> 
+      </div> 
+    </div>
+  </div>
+<script src="anime.min.js"></script>
+</body>
+</html>
